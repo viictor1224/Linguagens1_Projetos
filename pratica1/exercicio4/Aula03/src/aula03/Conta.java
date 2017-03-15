@@ -2,6 +2,7 @@ package aula03;
 
 public class Conta {
 
+
     private int numero;
     private double saldo;
     private Cliente titular;
@@ -21,6 +22,7 @@ public class Conta {
     }
 
     public void depositar(double valor) {
+
         if (valor > 0) {
             this.saldo = this.saldo + valor;
         }
