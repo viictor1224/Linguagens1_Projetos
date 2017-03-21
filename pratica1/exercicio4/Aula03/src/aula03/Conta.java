@@ -2,19 +2,21 @@ package aula03;
 
 public class Conta {
 
-
     private int numero;
     private double saldo;
     private Cliente titular;
 
-    public Conta(int numero,String nome,String sobrenome,String cpf) {
-        this.numero = numero;
-        
+    public Conta(int numero, String nome, String sobrenome, String cpf) {
+
         this.titular = new Cliente();
-        this.titular.nome = nome;
-        this.titular.sobrenome = sobrenome;
-        this.titular.cpf = cpf;
-        
+        this.numero = numero;
+        this.titular.setNome(nome);
+        this.titular.setSobrenome(sobrenome);
+        this.titular.setCpf(cpf);
+    }
+
+    public void visualizarDados() {
+        this.titular.visualizarCliente();
     }
 
     public void visualizarSaldo() {
