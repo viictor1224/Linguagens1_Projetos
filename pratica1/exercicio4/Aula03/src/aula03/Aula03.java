@@ -4,7 +4,7 @@ public class Aula03 {
 
     public static void main(String[] args) {
 
-        Conta c1 = new Conta(1234, "Victor", "Xavier", "testecpf");
+        Conta c1 = new Conta("Victor", "Xavier", "testecpf");
         c1.visualizarDados();
         //c1.titular.nome = "Victor";        private
         //c1.titular.sobrenome = "Xavier";   private

@@ -6,10 +6,9 @@ public class Conta {
     private double saldo;
     private Cliente titular;
 
-    public Conta(int numero, String nome, String sobrenome, String cpf) {
+    public Conta(String nome, String sobrenome, String cpf) {
 
         this.titular = new Cliente();
-        this.numero = numero;
         this.titular.setNome(nome);
         this.titular.setSobrenome(sobrenome);
         this.titular.setCpf(cpf);
