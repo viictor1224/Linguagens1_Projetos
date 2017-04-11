@@ -2,23 +2,23 @@ package testeheranca;
 
 public class Vendedor {
 
-    private String nomeCompleto;
-    private String cpf;
-    private int registro;
-    private static double taxaComissao = 0.03;
-    private double horasExtras;
-    private double salarioBase;
-    private double totalVendas;
+    protected String nomeCompleto;
+    protected String cpf;
+    protected int registro;
+    protected static double taxaComissao = 0.03;
+    protected double horasExtras;
+    protected double salarioBase;
+    protected double totalVendas;
     private Gerente gerente;
-    
-    public Vendedor (String n, String c, int reg, double salario, double hora, Gerente chefe){
+
+    public Vendedor(String n, String c, int reg, double salario, double hora, Gerente chefe) {
         this.setNomeCompleto(n);
         this.setCpf(c);
         this.setRegistro(reg);
         this.setSalarioBase(salario);
         this.setHorasExtras(hora);
-        this.gerente=chefe;
-        
+        this.gerente = chefe;
+
     }
 
     public double getSalarioBase() {
@@ -39,6 +39,10 @@ public class Vendedor {
 
     public String getCpf() {
         return this.cpf;
+    }
+
+    public String getGerente() {
+        return this.gerente.getNomeCompleto();
     }
 
     public void setCpf(String newCpf) {
