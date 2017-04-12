@@ -1,4 +1,4 @@
-package testeheranca;
+package exercicio3;
 
 public class Vendedor {
 
@@ -17,7 +17,6 @@ public class Vendedor {
         this.setRegistro(reg);
         this.setSalarioBase(salario);
         this.setHorasExtras(hora);
-        
 
     }
 

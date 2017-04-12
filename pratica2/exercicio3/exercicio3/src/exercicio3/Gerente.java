@@ -1,4 +1,4 @@
-package testeheranca;
+package exercicio3;
 
 public class Gerente extends Vendedor {
 
@@ -13,7 +13,7 @@ public class Gerente extends Vendedor {
     private int vendedores;
 
     public Gerente(String n, String c, int reg, double salario, double hora) {
-        super(n,c,reg,salario,hora);
+        super(n, c, reg, salario, hora);
     }
 
 //    public void contabilizarVendedores() {
