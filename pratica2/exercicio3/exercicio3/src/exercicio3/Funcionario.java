@@ -5,10 +5,10 @@ public class Funcionario {
     protected String nomeCompleto;
     protected String cpf;
     protected int registro;
-    protected double horasExtras;
     protected double salarioBase;
-    protected double totalVendas;
-    protected static double taxaVendaTotais;
+//    protected double horasExtras;    
+//    protected double totalVendas;
+//    protected static double taxaVendaTotais;
 //    protected static int totalFuncionarios;
 
     public Funcionario(String n, String c, int reg, double salario) {
@@ -20,9 +20,10 @@ public class Funcionario {
     }
 
     public double calcularBonus(double individual) {
-        return individual;   
+        return individual;
+    }
 
-    public double getSalarioBase(){
+    public double getSalarioBase() {
         return this.salarioBase;
     }
 
@@ -40,10 +41,6 @@ public class Funcionario {
 
     public String getCpf() {
         return this.cpf;
-    }
-    
-    public String getGerente() {
-        return this.gerente.getNomeCompleto();
     }
 
     public final void setCpf(String newCpf) {
@@ -66,27 +63,6 @@ public class Funcionario {
         Vendedor.taxaComissao = newTaxaComissao;
     }
 
-    public double getHorasExtras() {
-        return this.horasExtras;
-    }
-
-    public final void setHorasExtras(double newHorasExtras) {
-        this.horasExtras = newHorasExtras;
-    }
-
-    public boolean contabilizarVenda(double venda) {
-        if (venda > 0) {
-            this.totalVendas = this.totalVendas + venda;
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public double calcularComissao() {
-        return totalVendas * Vendedor.taxaComissao;
-    }
-
     public double calcularDecimoTerceiro() {
         return this.salarioBase;
     }
@@ -94,5 +70,23 @@ public class Funcionario {
     public double calcularFerias() {
         return (4 / 3) * this.salarioBase;
     }
+    
+        public void exibirResumo() {
+        System.out.println("Nome completo: " + this.nomeCompleto);
+        System.out.println("Cpf: " + this.cpf);
+        System.out.println("Registro: " + this.registro);
+        System.out.println("Salário do mês: " + this.salarioBase);
+    }
 
+//    public double getHorasExtras() {
+//        return this.horasExtras;
+//    }
+//
+//    public final void setHorasExtras(double newHorasExtras) {
+//        this.horasExtras = newHorasExtras;
+//    }
+//
+//    public double calcularComissao() {
+//        return totalVendas * Vendedor.taxaComissao;
+//    }
 }

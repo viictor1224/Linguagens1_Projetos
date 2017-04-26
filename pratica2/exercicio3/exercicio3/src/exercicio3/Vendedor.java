@@ -6,8 +6,9 @@ public class Vendedor extends Funcionario {
     //private String cpf;
     //private int registro;
     //private double salarioBase;
-    //private double totalVendas;
+    //HERDADOS
     protected static double taxaComissao = 0.03;
+    private double vendas = 0;
     protected double horasExtras;
     private Gerente gerente;
 
@@ -16,18 +17,31 @@ public class Vendedor extends Funcionario {
     }
 
     public double salarioMes() {
-        return this.salarioBase + this.totalVendas * Vendedor.taxaComissao + this.horasExtras;
+        return this.salarioBase + this.vendas * Vendedor.taxaComissao + this.horasExtras;
     }
 
-    public double calcularBonus(double individual) {
-        return this.totalVendas * Vendedor.taxaComissao + individual;
+    @Override
+    public double calcularBonus(double bIndividual) {
+        return this.vendas * Vendedor.taxaComissao + bIndividual;
     }
 
+    public void realizarVenda(double valorVenda) {
+        if (valorVenda > 0) {
+            this.vendas += valorVenda;
+        }
+    }
+
+    public double getVendas() {
+        return this.vendas;
+    }
+    
+    public double remuneracaoFinal( double bIndividual) {
+        return this.calcularBonus(bIndividual) + this.salarioBase;        
+    }
+
+    @Override
     public void exibirResumo() {
-        System.out.println("Nome completo: " + this.nomeCompleto);
-        System.out.println("Cpf: " + this.cpf);
-        System.out.println("Registro: " + this.registro);
-        System.out.println("Salário do mês: " + this.salarioMes());
+        super.exibirResumo();
+        System.out.println("Vendas: " + this.vendas);
     }
-
 }
