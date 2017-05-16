@@ -1,12 +1,7 @@
-
-
-
 package exerciciointerface;
 
+public interface IImprimivel extends IExibicao {
 
+    public void imprimirResumo();
 
-public interface IImprimivel {
-
-public void imprimirResumo();
-    
 }
