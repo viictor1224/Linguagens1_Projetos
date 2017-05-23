@@ -1,6 +1,6 @@
 package exercicio3;
 
-public abstract class Funcionario {
+public class Funcionario {
 
     protected String nomeCompleto;
     protected String cpf;
@@ -19,7 +19,9 @@ public abstract class Funcionario {
 
     }
 
-    public abstract double calcularBonus(double individual);
+    public double calcularBonus(double individual) {
+        return individual;
+    }
 
     public double getSalarioBase() {
         return this.salarioBase;
