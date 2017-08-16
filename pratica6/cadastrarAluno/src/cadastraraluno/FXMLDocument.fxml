@@ -7,24 +7,24 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cadastraraluno.FXMLDocumentController">
   <tabs>
     <Tab fx:id="tabCadastrarAluno" text="Cadastrar Aluno">
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="btnSalvar" layoutX="442.0" layoutY="282.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="88.0" text="Salvar" />
-                  <TextField fx:id="txtNome" layoutX="286.0" layoutY="46.0" prefHeight="25.0" prefWidth="187.0" promptText="Digite seu nome completo" text="txtNome" />
-                  <TextField fx:id="txtIdade" layoutX="286.0" layoutY="94.0" prefHeight="25.0" prefWidth="188.0" promptText="Digite sua idade" text="txtIdade" />
-                  <TextField fx:id="txtRg" layoutX="284.0" layoutY="192.0" prefHeight="25.0" prefWidth="190.0" promptText="Digite seu RG" text="txtRg" />
-                  <TextField fx:id="txtEndereço" layoutX="286.0" layoutY="143.0" prefHeight="25.0" prefWidth="187.0" promptText="Digite seu endereço" text="txtEndereço" />
-                  <TextField fx:id="txtCpf" layoutX="284.0" layoutY="241.0" prefHeight="25.0" prefWidth="191.0" promptText="Digite seu CPF" text="txtCpf" />
+                  <Button fx:id="btnSalvar" layoutX="442.0" layoutY="282.0" mnemonicParsing="false" onAction="#cliqueBotao" prefHeight="47.0" prefWidth="88.0" text="Salvar" />
+                  <TextField fx:id="txtNome" layoutX="286.0" layoutY="46.0" prefHeight="25.0" prefWidth="187.0" promptText="Digite seu nome completo" />
+                  <TextField fx:id="txtIdade" layoutX="286.0" layoutY="94.0" prefHeight="25.0" prefWidth="188.0" promptText="Digite sua idade" />
+                  <TextField fx:id="txtEndereço" layoutX="285.0" layoutY="136.0" prefHeight="25.0" prefWidth="190.0" promptText="Digite seu endereço" />
+                  <TextField fx:id="txtRg" layoutX="287.0" layoutY="188.0" prefHeight="25.0" prefWidth="187.0" promptText="Digite seu rg" />
+                  <TextField fx:id="txtCpf" layoutX="285.0" layoutY="240.0" prefHeight="25.0" prefWidth="191.0" promptText="Digite seu CPF" />
                   <Label fx:id="lblNome" layoutX="286.0" layoutY="23.0" text="Nome" />
                   <Label fx:id="lblIdade" layoutX="285.0" layoutY="71.0" text="Idade" />
-                  <Label fx:id="lblEndereço" layoutX="282.0" layoutY="119.0" text="Endereço" />
-                  <Label fx:id="lblRg" layoutX="289.0" layoutY="168.0" text="RG" />
+                  <Label fx:id="lblRg" layoutX="282.0" layoutY="168.0" text="RG" />
+                  <Label fx:id="lblEndereço" layoutX="289.0" layoutY="119.0" text="Endereço" />
                   <Label fx:id="lblCpf" layoutX="286.0" layoutY="217.0" text="CPF" />
-                  <ImageView fitHeight="127.0" fitWidth="129.0" layoutX="31.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="156.0" fitWidth="159.0" layoutX="31.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
                </children></AnchorPane>
       </content>
     </Tab>

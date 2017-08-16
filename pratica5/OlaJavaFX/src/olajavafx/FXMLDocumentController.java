@@ -21,6 +21,7 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private Label lblMensagem;
+    @FXML
     private Button btnClique;
     
     @FXML
