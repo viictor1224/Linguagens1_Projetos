@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="310.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celular.FXMLDocumentController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Pesquisar:" />
+      <TextField fx:id="txtPesquisar" layoutX="85.0" layoutY="9.0" prefHeight="27.0" prefWidth="213.0" promptText="Nome ou Número" />
+      <TableView fx:id="tableContato" layoutX="14.0" layoutY="44.0" prefHeight="291.0" prefWidth="283.0">
+        <columns>
+          <TableColumn fx:id="columnNome" prefWidth="141.0" text="Nome" />
+            <TableColumn fx:id="columnNumero" prefWidth="139.0" text="Número" />
+        </columns>
+      </TableView>
+      <Label layoutX="15.0" layoutY="349.0" text="Adicionar:" />
+      <TextField fx:id="txtAdicionar" layoutX="85.0" layoutY="344.0" prefHeight="27.0" prefWidth="213.0" promptText="Nome" />
+      <TextField fx:id="txtNumero" layoutX="85.0" layoutY="375.0" prefHeight="27.0" prefWidth="213.0" promptText="Número" />
+      <Button fx:id="btnAdicionar" layoutX="13.0" layoutY="406.0" mnemonicParsing="false" onAction="#ButtonAdd" prefHeight="27.0" prefWidth="283.0" text="Adicionar" />
+      <Label layoutX="15.0" layoutY="451.0" text="Remover:" />
+      <TextField fx:id="txtRemover" layoutX="85.0" layoutY="446.0" prefHeight="27.0" prefWidth="213.0" promptText="Nome" />
+      <Button fx:id="btnRemover" layoutX="15.0" layoutY="478.0" mnemonicParsing="false" onAction="#ButtonRemover" prefHeight="27.0" prefWidth="283.0" text="Remover" />
+   </children>
+</AnchorPane>

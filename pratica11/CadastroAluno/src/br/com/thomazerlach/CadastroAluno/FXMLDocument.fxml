@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="356.0" prefWidth="501.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.thomazerlach.CadastroAluno.FXMLDocumentController">
+   <children>
+      <TabPane layoutY="41.0" prefHeight="325.0" prefWidth="501.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-17.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="41.0">
+        <tabs>
+          <Tab text="Cadastro Aluno">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="207.0" prefWidth="501.0">
+                     <children>
+                        <ImageView fx:id="imgPerfil" fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="387.0" AnchorPane.topAnchor="14.0">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@DefaultUser.jpg" />
+                           </image>
+                        </ImageView>
+                        <Pane layoutX="130.0" layoutY="14.0" prefHeight="271.0" prefWidth="240.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="131.0" AnchorPane.topAnchor="14.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="6.0" text="Nome" />
+                              <TextField fx:id="txtNome" layoutX="14.0" layoutY="23.0" prefHeight="27.0" prefWidth="215.0" />
+                              <Label layoutX="14.0" layoutY="58.0" text="Idade" />
+                              <TextField fx:id="txtIdade" layoutX="14.0" layoutY="75.0" prefHeight="27.0" prefWidth="215.0" />
+                              <Label layoutX="14.0" layoutY="111.0" text="Endereço" />
+                              <TextField fx:id="txtEnd" layoutX="14.0" layoutY="128.0" prefWidth="215.0" />
+                              <Label layoutX="14.0" layoutY="162.0" text="RG" />
+                              <TextField fx:id="txtRg" layoutX="14.0" layoutY="179.0" prefWidth="215.0" promptText="XX.XXX.XXX-X" />
+                              <Label layoutX="14.0" layoutY="214.0" text="CPF" />
+                              <TextField fx:id="txtCpf" layoutX="14.0" layoutY="231.0" prefWidth="215.0" promptText="XXX.XXX.XXX-XX" />
+                           </children>
+                        </Pane>
+                        <Button fx:id="btnSalvar" layoutX="393.0" layoutY="239.0" mnemonicParsing="false" onAction="#salvarButtonAction" prefHeight="32.0" prefWidth="94.0" text="Adicionar" />
+                        <Button fx:id="btnEscolher" layoutX="14.0" layoutY="120.0" mnemonicParsing="false" onAction="#escolherButtonAction" prefHeight="36.0" prefWidth="100.0" text="Escolher..." />
+                        <Label fx:id="fileSelected" layoutX="14.0" layoutY="154.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="487.0" AnchorPane.topAnchor="154.0" />
+                        <Button fx:id="btnLimpar" layoutX="14.0" layoutY="163.0" mnemonicParsing="false" onAction="#LimparButtonAction" prefHeight="35.0" prefWidth="100.0" text="Limpar" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Pesquisar">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="301.0" prefWidth="501.0">
+                     <children>
+                        <TextField fx:id="txtPesquisa" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="382.0" />
+                        <Button fx:id="btnAtualizar" layoutX="402.0" layoutY="14.0" mnemonicParsing="false" onAction="#atualizarButton" prefHeight="27.0" prefWidth="85.0" text="Atualizar" />
+                        <TableView fx:id="tableAlunos" layoutX="14.0" layoutY="44.0" prefHeight="229.0" prefWidth="473.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="48.0">
+                          <columns>
+                            <TableColumn fx:id="cellNome" editable="false" prefWidth="134.0" sortable="false" text="Nome" />
+                            <TableColumn fx:id="cellIdade" editable="false" prefWidth="43.0" sortable="false" text="Idade" />
+                              <TableColumn fx:id="cellEnd" editable="false" prefWidth="127.0" sortable="false" text="Endereço" />
+                              <TableColumn fx:id="cellRg" editable="false" prefWidth="81.0" sortable="false" text="RG " />
+                              <TableColumn fx:id="cellCpf" editable="false" prefWidth="87.0" sortable="false" text="CPF" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <ToolBar layoutY="-2.0" prefHeight="43.0" prefWidth="501.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <items>
+            <Label fx:id="lblStatus" />
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

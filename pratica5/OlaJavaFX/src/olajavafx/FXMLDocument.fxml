@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="260.0" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="olajavafx.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="320.0" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="olajavafx.FXMLDocumentController">
     <children>
-      <Button fx:id="btnClique" layoutX="36.0" layoutY="123.0" mnemonicParsing="false" onAction="#cliqueBotao" prefHeight="54.0" prefWidth="249.0" text="Clique em mim" />
-      <Label fx:id="lblMensagem" layoutX="132.0" layoutY="36.0" text="Texto Aqui" />
+      <Button fx:id="btnClique" layoutX="76.0" layoutY="226.0" mnemonicParsing="false" onAction="#cliqueBotao" prefHeight="47.0" prefWidth="168.0" text="clique em mim" />
+      <Label fx:id="lblMensagem" layoutX="45.0" layoutY="37.0" text="Você é o usuario de numero 1000000" textAlignment="CENTER" />
+      <ImageView fx:id="imgTiago" fitHeight="150.0" fitWidth="200.0" layoutX="94.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../segundaTela/src/segundatela/tiago.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

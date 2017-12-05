@@ -7,12 +7,12 @@ package telaconan;
 
 /**
  *
- * @author Aluno 13
+ * @author thomazerlach
  */
 public class TelaPrincipal extends javax.swing.JFrame {
 
     /**
-     * Creates new form NovoJFrame
+     * Creates new form telaPrincipal
      */
     public TelaPrincipal() {
         initComponents();
@@ -28,18 +28,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        btnClique = new javax.swing.JButton();
+        BtnClique = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
         jLabel1.setText("Meu Primeiro Label");
 
-        btnClique.setText("Clique em mim");
-        btnClique.addActionListener(new java.awt.event.ActionListener() {
+        BtnClique.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        BtnClique.setText("Clique em mim");
+        BtnClique.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCliqueActionPerformed(evt);
+                BtnCliqueActionPerformed(evt);
             }
         });
 
@@ -48,31 +48,32 @@ public class TelaPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(357, 357, 357)
-                .addComponent(btnClique, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 929, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 10, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(83, 83, 83))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(BtnClique)
+                        .addGap(142, 142, 142))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(103, 103, 103)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(122, 122, 122)
-                .addComponent(btnClique, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(265, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel1)
+                .addGap(50, 50, 50)
+                .addComponent(BtnClique, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(111, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCliqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCliqueActionPerformed
-       
-        jLabel1.setText("Thomaz lixo");
-        
-    }//GEN-LAST:event_btnCliqueActionPerformed
+    private void BtnCliqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCliqueActionPerformed
+        // TODO add your handling code here:
+        jLabel1.setText("Olá, Mundo!");
+    }//GEN-LAST:event_BtnCliqueActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,7 +112,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnClique;
+    private javax.swing.JButton BtnClique;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

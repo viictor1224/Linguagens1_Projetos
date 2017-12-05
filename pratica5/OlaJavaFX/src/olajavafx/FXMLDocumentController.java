@@ -12,23 +12,25 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+import javafx.scene.image.Image;
 
 /**
  *
- * @author Aluno 13
+ * @author thomazerlach
  */
 public class FXMLDocumentController implements Initializable {
     
     @FXML
     private Label lblMensagem;
-    @FXML
     private Button btnClique;
+    @FXML
+    private ImageView imgTiago;
     
     @FXML
     private void cliqueBotao(ActionEvent event) {
-        lblMensagem.setText("Parabains");
-        btnClique.setText("Valeu");
-        
+        lblMensagem.setText("Parabains!");
+        imgTiago.setVisible(true);
     }
     
     @Override

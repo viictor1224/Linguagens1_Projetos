@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="526.0" prefWidth="492.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.thomazerlach.controleestoque.FXMLDocumentController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Id do Produto:" />
+      <TextField fx:id="txtId" layoutX="14.0" layoutY="31.0" prefHeight="27.0" prefWidth="125.0" />
+      <Label layoutX="14.0" layoutY="65.0" text="Quantidade:" />
+      <TextField fx:id="txtQuantidade" layoutX="14.0" layoutY="82.0" prefHeight="27.0" prefWidth="125.0" />
+      <Button layoutX="180.0" layoutY="31.0" mnemonicParsing="false" onAction="#AddButtonAction" prefHeight="27.0" prefWidth="125.0" text="Adicionar" />
+      <Button layoutX="180.0" layoutY="82.0" mnemonicParsing="false" onAction="#RemoveButtonAction" prefHeight="27.0" prefWidth="125.0" text="Remover" />
+      <Button layoutX="353.0" layoutY="82.0" mnemonicParsing="false" onAction="#UpdateButtonAction" prefHeight="27.0" prefWidth="125.0" text="Atualizar" />
+      <TableView fx:id="tbView" layoutX="14.0" layoutY="119.0" prefHeight="392.0" prefWidth="463.0">
+         <columns>
+            <TableColumn fx:id="tbcId" prefWidth="94.0" text="Id Produto" />
+            <TableColumn fx:id="tbcNome" prefWidth="139.0" text="Nome" />
+            <TableColumn fx:id="tbcMarca" prefWidth="134.0" text="Marca" />
+            <TableColumn fx:id="tbcQuantidade" prefWidth="95.0" text="Quantidade" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

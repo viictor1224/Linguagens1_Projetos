@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="518.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.thomazerlach.compraecommerce.FXMLDocumentController">
+    <children>
+      <Pane fx:id="paneLogin" layoutX="289.0" layoutY="140.0" prefHeight="239.0" prefWidth="195.0">
+         <children>
+            <Label layoutX="60.0" layoutY="6.0" text="Bem-Vindo!" />
+            <Label layoutX="28.0" layoutY="23.0" text="Faça login para iniciar!" />
+            <Label layoutX="14.0" layoutY="50.0" text="Email:" />
+            <TextField fx:id="txtEmailLogin" layoutX="14.0" layoutY="67.0" />
+            <Label layoutX="14.0" layoutY="101.0" text="Senha:" />
+            <PasswordField fx:id="txtSenhaLogin" layoutX="14.0" layoutY="120.0" />
+            <Button layoutX="14.0" layoutY="155.0" mnemonicParsing="false" onAction="#LoginButtonAction" prefHeight="27.0" prefWidth="167.0" text="Login" />
+            <Button layoutX="14.0" layoutY="194.0" mnemonicParsing="false" onAction="#LoginCriarButtonAction" prefHeight="27.0" prefWidth="167.0" text="Criar Conta" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneCriar" layoutX="289.0" layoutY="27.0" prefHeight="464.0" prefWidth="195.0" visible="false">
+         <children>
+            <Label layoutX="63.0" layoutY="14.0" text="Criar Conta" />
+            <Label layoutX="14.0" layoutY="44.0" text="Nome:" />
+            <TextField fx:id="txtNomeCriar" layoutX="14.0" layoutY="61.0" />
+            <Label layoutX="14.0" layoutY="100.0" text="Email:" />
+            <TextField fx:id="txtEmailCriar" layoutX="14.0" layoutY="117.0" />
+            <Label layoutX="14.0" layoutY="154.0" text="Senha:" />
+            <PasswordField fx:id="txtSenhaCriar" layoutX="14.0" layoutY="171.0" />
+            <Label layoutX="14.0" layoutY="208.0" text="CPF:" />
+            <TextField fx:id="txtCpfCriar" layoutX="14.0" layoutY="225.0" />
+            <Label layoutX="13.0" layoutY="264.0" text="CEP:" />
+            <TextField fx:id="txtCepCriar" layoutX="14.0" layoutY="281.0" />
+            <Label layoutX="14.0" layoutY="321.0" text="Endereço:" />
+            <TextField fx:id="txtEnderecoCriar" layoutX="14.0" layoutY="338.0" />
+            <Button layoutX="16.0" layoutY="380.0" mnemonicParsing="false" onAction="#CriarContaButtonAction" prefHeight="27.0" prefWidth="167.0" text="Criar Conta" />
+            <Button layoutX="16.0" layoutY="421.0" mnemonicParsing="false" onAction="#CancelarCriarButtonAction" prefHeight="27.0" prefWidth="167.0" text="Cancelar" />
+         </children>
+      </Pane>
+      <Pane fx:id="panePrincipal" prefHeight="518.0" prefWidth="773.0" visible="false">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="773.0">
+              <items>
+                  <Label fx:id="lblNomeAtual" text="Olá!" />
+                <Button mnemonicParsing="false" onAction="#SairButtonAction" text="Sair" />
+              </items>
+            </ToolBar>
+            <TabPane layoutY="39.0" prefHeight="479.0" prefWidth="773.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Comprar">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button layoutX="15.0" layoutY="10.0" mnemonicParsing="false" onAction="#AtualizarProdutosButtonAction" text="Atualizar Produtos" />
+                              <TableView fx:id="tbViewProdutos" layoutX="15.0" layoutY="47.0" prefHeight="333.0" prefWidth="743.0">
+                                <columns>
+                                  <TableColumn fx:id="tbcIdProdutos" prefWidth="60.0" text="Id" />
+                                  <TableColumn fx:id="tbcNomeProdutos" prefWidth="156.0" text="Nome" />
+                                    <TableColumn fx:id="tbcDescProdutos" prefWidth="265.0" text="Descrição" />
+                                    <TableColumn fx:id="tbcMarcaProdutos" prefWidth="91.0" text="Marca" />
+                                    <TableColumn fx:id="tbcPrecoProdutos" prefWidth="85.0" text="Preço" />
+                                    <TableColumn fx:id="tbcQuantidadeProdutos" prefWidth="85.0" text="Quantidade" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="15.0" layoutY="389.0" text="Id do Produto:" />
+                              <TextField fx:id="txtIdProdutos" layoutX="14.0" layoutY="406.0" prefHeight="27.0" prefWidth="195.0" />
+                              <Label layoutX="288.0" layoutY="389.0" text="Quantidade:" />
+                              <TextField fx:id="txtQuantidadeProdutos" layoutX="288.0" layoutY="406.0" prefHeight="27.0" prefWidth="195.0" />
+                              <Button layoutX="563.0" layoutY="406.0" mnemonicParsing="false" onAction="#AddCarinhoButtonAction" prefHeight="27.0" prefWidth="195.0" text="Adicionar ao Carrinho" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Carrinho">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="lblTotalCarrinho" layoutX="14.0" layoutY="15.0" text="Total do Carrinho:" />
+                              <Button layoutX="621.0" layoutY="10.0" mnemonicParsing="false" onAction="#FinalizarCompraButtonAction" prefHeight="27.0" prefWidth="138.0" text="Finalizar Compra!" />
+                              <TableView fx:id="tbViewCarrinho" layoutX="14.0" layoutY="49.0" prefHeight="280.0" prefWidth="745.0">
+                                <columns>
+                                  <TableColumn fx:id="tcIdCarrinho" prefWidth="75.0" text="Id" />
+                                  <TableColumn fx:id="tcNomeCarrinho" prefWidth="296.0" text="Nome" />
+                                    <TableColumn fx:id="tcQuantidadeCarrinho" prefWidth="124.0" text="Quantidade" />
+                                    <TableColumn fx:id="tcPrecoCarrinho" prefWidth="127.0" text="Preço Unitário" />
+                                    <TableColumn fx:id="tcTotalCarrinho" prefWidth="122.0" text="Total" />
+                                </columns>
+                              </TableView>
+                              <Pane layoutX="14.0" layoutY="341.0" prefHeight="95.0" prefWidth="744.0" style="-fx-background-color: #c0c0c0;">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="11.0" text="Remover itens do carrinho!" />
+                                    <Label layoutX="14.0" layoutY="38.0" text="Id do Produto:" />
+                                    <TextField fx:id="txtIdCarrinho" layoutX="14.0" layoutY="55.0" prefHeight="27.0" prefWidth="195.0" />
+                                    <Label layoutX="275.0" layoutY="38.0" text="Quantidade a ser removida:" />
+                                    <TextField fx:id="txtQuantidadeCarrinho" layoutX="275.0" layoutY="55.0" prefHeight="27.0" prefWidth="195.0" />
+                                    <Button layoutX="535.0" layoutY="55.0" mnemonicParsing="false" onAction="#RemoverCarrinhoButtonAction" prefHeight="27.0" prefWidth="195.0" text="Remover Item" />
+                                    <Button layoutX="535.0" layoutY="14.0" mnemonicParsing="false" onAction="#RemoverTudoCarrinhoButtonAction" prefHeight="27.0" prefWidth="195.0" text="Remover Tudo!" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Pedidos">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#AtualizarPedidosButtonAction" text="Atualizar Pedidos" />
+                              <TableView fx:id="tbViewPedidos" layoutX="14.0" layoutY="49.0" prefHeight="157.0" prefWidth="746.0">
+                                <columns>
+                                  <TableColumn fx:id="tcIdPedidos" prefWidth="122.0" text="Id do Pedido" />
+                                  <TableColumn fx:id="tcDataPedidos" prefWidth="197.0" text="Data" />
+                                    <TableColumn fx:id="tcTotalPedidos" prefWidth="118.0" text="Total" />
+                                    <TableColumn fx:id="tcStatusPedidos" prefWidth="308.0" text="Status" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="14.0" layoutY="213.0" text="Id do Pedido:" />
+                              <TextField fx:id="txtIdPedidos" layoutX="14.0" layoutY="230.0" prefHeight="27.0" prefWidth="167.0" />
+                              <Button layoutX="195.0" layoutY="230.0" mnemonicParsing="false" onAction="#VisualizarPedidosButtonAction" prefHeight="27.0" prefWidth="167.0" text="Visualizar Pedido" />
+                              <TableView fx:id="tbViewDetalhes" layoutX="14.0" layoutY="267.0" prefHeight="165.0" prefWidth="745.0">
+                                <columns>
+                                  <TableColumn fx:id="tcIdDetalhes" prefWidth="114.0" text="Id do Produto" />
+                                  <TableColumn fx:id="tcNomeDetalhes" prefWidth="243.0" text="Nome" />
+                                    <TableColumn fx:id="tcQuantidadeDetalhes" prefWidth="114.0" text="Quantidade" />
+                                    <TableColumn fx:id="tcPrecoDetalhes" prefWidth="131.0" text="Preço Unitário" />
+                                    <TableColumn fx:id="tcTotalDetalhes" prefWidth="142.0" text="Total" />
+                                </columns>
+                              </TableView>
+                              <Button layoutX="592.0" layoutY="230.0" mnemonicParsing="false" onAction="#GerarNotaButtonAction" prefHeight="27.0" prefWidth="167.0" text="Gerar Nota Fiscal" />
+                              <Label fx:id="lbTotalPedidos" layoutX="375.0" layoutY="235.0" text="Total:" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

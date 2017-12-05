@@ -13,9 +13,9 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Aluno 13
+ * @author thomazerlach
  */
-public class OlaJavaFX extends Application {
+public class OlaJavaFx extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
