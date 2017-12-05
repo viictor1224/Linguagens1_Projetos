@@ -33,7 +33,7 @@ import javafx.collections.transformation.SortedList;
 
 /**
  *
- * @author thomazerlach
+ * @author victorxavier
  */
 public class FXMLDocumentController implements Initializable {
     

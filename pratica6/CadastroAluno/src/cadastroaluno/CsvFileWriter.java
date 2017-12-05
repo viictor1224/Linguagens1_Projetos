@@ -15,7 +15,7 @@ import java.util.List;
 
 /**
  *
- * @author thomazerlach
+ * @author victorxavier
  */
 public class CsvFileWriter {
     //Delimiter used in CSV file

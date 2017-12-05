@@ -7,7 +7,7 @@ package contadorsimples;
 
 /**
  *
- * @author thomazerlach
+ * @author victorxavier
  */
 public class ContadorSimples {
 

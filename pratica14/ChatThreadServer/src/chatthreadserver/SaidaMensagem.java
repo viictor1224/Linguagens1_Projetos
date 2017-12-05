@@ -7,7 +7,7 @@ package chatthreadserver;
 
 /**
  *
- * @author thomazerlach
+ * @author victorxavier
  */
 public class SaidaMensagem implements Runnable{
     

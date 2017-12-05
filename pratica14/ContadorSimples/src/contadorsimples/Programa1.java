@@ -7,7 +7,7 @@ package contadorsimples;
 
 /**
  *
- * @author thomazerlach
+ * @author victorxavier
  */
 public class Programa1 implements Runnable{
     

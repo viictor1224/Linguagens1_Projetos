@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 /**
  *
- * @author thomazerlach
+ * @author victorxavier
  */
 public class TelaJava extends javax.swing.JFrame {
     

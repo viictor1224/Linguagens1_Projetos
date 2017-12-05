@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Aluno 13
+ * @author victorxavier
  */
 public class HelloMySQL {
 

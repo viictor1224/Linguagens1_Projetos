@@ -7,7 +7,7 @@ package celular;
 
 /**
  *
- * @author thomazerlach
+ * @author victorxavier
  */
 public class Contato {
     

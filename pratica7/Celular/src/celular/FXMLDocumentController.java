@@ -26,7 +26,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author thomazerlach
+ * @author victorxavier
  */
 public class FXMLDocumentController implements Initializable {
 

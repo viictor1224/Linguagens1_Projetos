@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author thomazerlach
+ * @author victorxavier
  */
 public class ExercicioCompras extends Application {
     

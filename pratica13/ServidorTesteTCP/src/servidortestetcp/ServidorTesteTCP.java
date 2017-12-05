@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author thomazerlach
+ * @author victorxavier
  */
 public class ServidorTesteTCP {
 

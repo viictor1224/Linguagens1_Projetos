@@ -7,7 +7,7 @@ package testepilha;
 
 /**
  *
- * @author thomazerlach
+ * @author victorxavier
  */
 public class TestePilha {
 

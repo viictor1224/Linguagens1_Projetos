@@ -7,7 +7,7 @@ package exerciciocompras;
 
 /**
  *
- * @author thomazerlach
+ * @author victorxavier
  */
 public class Compra {
     

@@ -7,7 +7,7 @@ package cadastroaluno;
 
 /**
  *
- * @author thomazerlach
+ * @author victorxavier
  */
 public class Person {
     

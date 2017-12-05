@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author thomazerlach
+ * @author victorxavier
  */
 public class ChatClient {
 
